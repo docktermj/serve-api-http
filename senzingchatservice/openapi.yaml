@@ -53,13 +53,13 @@ tags:
       url: http://senzing.com
 paths:
 
-  /g2config/add_data_source:
+  /g2config/add-data-source:
     post:
       tags:
         - g2config
       summary: TODO
       description: TODO
-      operationId: g2config_add_data_source
+      operationId: postG2configAddDataSource
       parameters:
         - name: configHandle
           in: query
@@ -89,7 +89,7 @@ paths:
         - g2config
       summary: TODO
       description: TODO
-      operationId: g2config_close
+      operationId: postG2configClose
       parameters:
         - name: configHandle
           in: query
@@ -109,7 +109,7 @@ paths:
         - g2config
       summary: TODO
       description: TODO
-      operationId: g2config_create
+      operationId: postG2configCreate
       requestBody:
         description: TODO
         content:
@@ -125,13 +125,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SimpleResponse'
 
-  /g2config/delete_data_source:
+  /g2config/delete-data-source:
     post:
       tags:
         - g2config
       summary: TODO
       description: TODO
-      operationId: g2config_delete_data_source
+      operationId: postG2configDeleteDataSource
       parameters:
         - name: configHandle
           in: query
@@ -162,7 +162,7 @@ paths:
         - g2config
       summary: TODO
       description: TODO
-      operationId: g2config_destroy
+      operationId: postG2configDestroy
       responses:
         '200':
           description: Successful operation
@@ -177,7 +177,7 @@ paths:
         - g2config
       summary: TODO
       description: TODO
-      operationId: g2config_init
+      operationId: postG2configInit
       parameters:
         - name: moduleName
           in: query
@@ -201,13 +201,13 @@ paths:
         '200':
           description: Successful operation
 
-  /g2config/list_data_sources:
+  /g2config/list-data-sources:
     post:
       tags:
         - g2config
       summary: TODO
       description: TODO
-      operationId: g2config_list_data_sources
+      operationId: postG2configListDataSources
       parameters:
         - name: configHandle
           in: query
@@ -237,7 +237,7 @@ paths:
         - g2config
       summary: TODO
       description: TODO
-      operationId: g2config_load
+      operationId: postG2configLoad
       requestBody:
         description: TODO
         content:
@@ -259,7 +259,7 @@ paths:
         - g2config
       summary: TODO
       description: TODO
-      operationId: g2config_save
+      operationId: postG2configSave
       parameters:
         - name: configHandle
           in: query
@@ -283,6 +283,220 @@ paths:
               schema:
                 $ref: '#/components/schemas/SimpleResponse'
 
+  /g2configmgr/add-config:
+    post:
+      tags:
+        - g2configmgr
+      summary: TODO
+      description: TODO
+      operationId: postG2configmgrAddConfig
+      parameters:
+        - name: configComments
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2configmgr/destroy:
+    post:
+      tags:
+        - g2configmgr
+      summary: TODO
+      description: TODO
+      operationId: postG2configmgrDestroy
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2configmgr/get-config:
+    post:
+      tags:
+        - g2configmgr
+      summary: TODO
+      description: TODO
+      operationId: postG2configGetConfig
+      parameters:
+        - name: configHandle
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2configmgr/get-config-list:
+    post:
+      tags:
+        - g2configmgr
+      summary: TODO
+      description: TODO
+      operationId: postG2configGetConfigList
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2configmgr/get-default-config-id:
+    post:
+      tags:
+        - g2configmgr
+      summary: TODO
+      description: TODO
+      operationId: postG2configGetDefaultConfigID
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2configmgr/init:
+    post:
+      tags:
+        - g2configmgr
+      summary: TODO
+      description: TODO
+      operationId: postG2configmgrInit
+      parameters:
+        - name: moduleName
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: verboseLogging
+          in: query
+          description: TODO
+          schema:
+            type: string
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+
+  /g2configmgr/replace-default-config-id:
+    post:
+      tags:
+        - g2config
+      summary: TODO
+      description: TODO
+      operationId: postG2configmgrReplaceDefaultConfigID
+      parameters:
+        - name: oldConfigID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: newConfigID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2configmgr/set-default-config-id:
+    post:
+      tags:
+        - g2config
+      summary: TODO
+      description: TODO
+      operationId: postG2configmgrReplaceDefaultConfigID
+      parameters:
+        - name: configID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
 
 components:
   schemas:
