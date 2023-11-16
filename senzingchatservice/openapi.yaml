@@ -189,7 +189,8 @@ paths:
           in: query
           description: TODO
           schema:
-            type: string
+            type: integer
+            format: int64
       requestBody:
         description: TODO
         content:
@@ -419,7 +420,8 @@ paths:
           in: query
           description: TODO
           schema:
-            type: string
+            type: integer
+            format: int64
       requestBody:
         description: TODO
         content:
@@ -434,7 +436,7 @@ paths:
   /g2configmgr/replace-default-config-id:
     post:
       tags:
-        - g2config
+        - g2configmgr
       summary: TODO
       description: TODO
       operationId: postG2configmgrReplaceDefaultConfigID
@@ -471,12 +473,218 @@ paths:
   /g2configmgr/set-default-config-id:
     post:
       tags:
-        - g2config
+        - g2configmgr
       summary: TODO
       description: TODO
       operationId: postG2configmgrSetDefaultConfigID
       parameters:
         - name: configID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2diagnostic/check-db-perf:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticCheckDBPerf
+      parameters:
+        - name: secondsToRun
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2diagnostic/destroy:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticDestroy
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2diagnostic/get-available-memory:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticGetAvailableMemory
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2diagnostic/get-db-info:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticGetDBInfo
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2diagnostic/get-logical-cores:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticGetLogicalCores
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2diagnostic/get-physical-cores:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticGetPhysicalCores
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2diagnostic/get-total-system-memory:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticGetTotalSystemMemory
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2diagnostic/init:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticInit
+      parameters:
+        - name: moduleName
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: verboseLogging
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+
+  /g2diagnostic/init-with-config-id:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticInitWithConfigID
+      parameters:
+        - name: initConfigID
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: TODO
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+
+  /g2diagnostic/stream-entity-list-by-size:
+    post:
+      tags:
+        - g2diagnostic
+      summary: TODO
+      description: TODO
+      operationId: postG2diagnosticStreamEntityListBySize
+      parameters:
+        - name: entitySize
           in: query
           description: TODO
           required: true
