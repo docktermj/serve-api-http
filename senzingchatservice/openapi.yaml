@@ -69,7 +69,7 @@ paths:
             type: integer
             format: int64
       requestBody:
-        description: TODO
+        description: inputJson (TODO)
         content:
           application/json:
             schema:
@@ -110,13 +110,6 @@ paths:
       summary: TODO
       description: TODO
       operationId: postG2configCreate
-      requestBody:
-        description: TODO
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExampleJsonString'
-        required: true
       responses:
         '200':
           description: Successful operation
@@ -140,9 +133,8 @@ paths:
           schema:
             type: integer
             format: int64
-
       requestBody:
-        description: TODO
+        description: inputJson (TODO)
         content:
           application/json:
             schema:
@@ -192,7 +184,7 @@ paths:
             type: integer
             format: int64
       requestBody:
-        description: TODO
+        description: iniParams (TODO)
         content:
           application/json:
             schema:
@@ -217,13 +209,6 @@ paths:
           schema:
             type: integer
             format: int64
-      requestBody:
-        description: TODO
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExampleJsonString'
-        required: true
       responses:
         '200':
           description: Successful operation
@@ -240,7 +225,7 @@ paths:
       description: TODO
       operationId: postG2configLoad
       requestBody:
-        description: TODO
+        description: jsonConfig (TODO)
         content:
           application/json:
             schema:
@@ -269,13 +254,6 @@ paths:
           schema:
             type: integer
             format: int64
-      requestBody:
-        description: TODO
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExampleJsonString'
-        required: true
       responses:
         '200':
           description: Successful operation
@@ -299,7 +277,7 @@ paths:
           schema:
             type: string
       requestBody:
-        description: TODO
+        description: configStr (TODO)
         content:
           application/json:
             schema:
@@ -336,20 +314,13 @@ paths:
       description: TODO
       operationId: postG2configGetConfig
       parameters:
-        - name: configHandle
+        - name: configID
           in: query
           description: TODO
           required: true
           schema:
             type: integer
             format: int64
-      requestBody:
-        description: TODO
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExampleJsonString'
-        required: true
       responses:
         '200':
           description: Successful operation
@@ -365,13 +336,6 @@ paths:
       summary: TODO
       description: TODO
       operationId: postG2configGetConfigList
-      requestBody:
-        description: TODO
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExampleJsonString'
-        required: true
       responses:
         '200':
           description: Successful operation
@@ -387,13 +351,6 @@ paths:
       summary: TODO
       description: TODO
       operationId: postG2configGetDefaultConfigID
-      requestBody:
-        description: TODO
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExampleJsonString'
-        required: true
       responses:
         '200':
           description: Successful operation
@@ -423,7 +380,7 @@ paths:
             type: integer
             format: int64
       requestBody:
-        description: TODO
+        description: iniParams (TODO)
         content:
           application/json:
             schema:
@@ -455,13 +412,6 @@ paths:
           schema:
             type: integer
             format: int64
-      requestBody:
-        description: TODO
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExampleJsonString'
-        required: true
       responses:
         '200':
           description: Successful operation
@@ -485,13 +435,6 @@ paths:
           schema:
             type: integer
             format: int64
-      requestBody:
-        description: TODO
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExampleJsonString'
-        required: true
       responses:
         '200':
           description: Successful operation
@@ -515,13 +458,6 @@ paths:
           schema:
             type: integer
             format: int64
-      requestBody:
-        description: TODO
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExampleJsonString'
-        required: true
       responses:
         '200':
           description: Successful operation
@@ -641,7 +577,7 @@ paths:
             type: integer
             format: int64
       requestBody:
-        description: TODO
+        description: iniParams (TODO)
         content:
           application/json:
             schema:
@@ -666,7 +602,7 @@ paths:
             type: integer
             format: int64
       requestBody:
-        description: TODO
+        description: iniParams (TODO)
         content:
           application/json:
             schema:
@@ -691,13 +627,1200 @@ paths:
           schema:
             type: integer
             format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/add-record:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineAddRecord
+      parameters:
+        - name: dataSourceCode
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: loadID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: flags
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: integer
+            format: int64
       requestBody:
-        description: TODO
+        description: jsonData (TODO)
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/ExampleJsonString'
         required: true
+      responses:
+        '200':
+          description: Successful operation
+
+  /g2engine/add-record-with-info:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineAddRecordWithInfo
+      parameters:
+        - name: dataSourceCode
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: loadID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: flags
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: jsonData (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/close-export:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineCloseExport
+      parameters:
+        - name: responseHandle
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+
+  /g2engine/count-redo-records:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineCountRedoRecords
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/delete-record:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineDeleteRecord
+      parameters:
+        - name: dataSourceCode
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: loadID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/delete-record-with-info:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineDeleteRecordWithInfo
+      parameters:
+        - name: dataSourceCode
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: loadID
+          in: query
+          description: TODO
+          schema:
+            type: string
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/destroy:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineDestroy
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/export-config:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineExportConfig
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/export-config-and-config-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineExportConfigAndConfigID
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/export-csv-entity-report:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineExportCsvEntityReport
+      parameters:
+        - name: csvColumnList
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/export-json-entity-report:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineExportJsonEntityReport
+      parameters:
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/fetch-next:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFetchNext
+      parameters:
+        - name: responseHandle
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-interesting-entities-by-entity-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindInterestingEntitiesByEntityID
+      parameters:
+        - name: entityID
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-interesting-entities-by-record-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindInterestingEntitiesByRecordID
+      parameters:
+        - name: dataSourceCode
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: recordID
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-network-by-entity-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindNetworkByEntityID
+      parameters:
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: buildOutDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: maxEntities
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: entityList (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-network-by-entity-id_v2:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindInterestingEntitiesByRecordIDV2
+      parameters:
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: buildOutDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: maxEntities
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: entityList (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-network-by-record-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindNetworkByRecordID
+      parameters:
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: buildOutDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: maxEntities
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: recordList (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+
+  /g2engine/find-network-by-record-id-v2:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindNetworkByRecordIDV2
+      parameters:
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: buildOutDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: maxEntities
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: recordList (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-by-entity-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathByEntityID
+      parameters:
+        - name: entityID1
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: entityID2
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: entityID3
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-by-entity-id-v2:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathByEntityIDV2
+      parameters:
+        - name: entityID1
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: entityID2
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: entityID3
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-by-record-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathByRecordID
+      parameters:
+        - name: dataSourceCode1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: dataSourceCode2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+
+  /g2engine/find-path-by-record-id-v2:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathByRecordIDv2
+      parameters:
+        - name: dataSourceCode1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: dataSourceCode2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-excluding-by-entity-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathExcludingByEntityID
+      parameters:
+        - name: entityID1
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: entityID2
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: excludedEntities (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-excluding-by-entity-id-v2:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathExcludingByEntityIDV2
+      parameters:
+        - name: entityID1
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: entityID2
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: excludedEntities (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-excluding-by-record-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathExcludingByRecordID
+      parameters:
+        - name: dataSourceCode1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: dataSourceCode2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: excludedRecords (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-excluding-by-record-id-v2:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathExcludingByRecordIDV2
+      parameters:
+        - name: dataSourceCode1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: dataSourceCode2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: excludedRecords (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-including-source-by-entity-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathIncludingSourceByEntityID
+      parameters:
+        - name: entityID1
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: entityID2
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: excludedEntities and requiredDsrcs (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+
+  /g2engine/find-path-including-source-by-entity-id-v2:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathIncludingSourceByEntityIDV2
+      parameters:
+        - name: entityID1
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: entityID2
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: excludedEntities and requiredDsrcs (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-including-source-by-record-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathIncludingSourceByRecordID
+      parameters:
+        - name: dataSourceCode1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: dataSourceCode2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: excludedEntities and requiredDsrcs (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/find-path-including-source-by-record-id-v2:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineFindPathIncludingSourceByRecordIDV2
+      parameters:
+        - name: dataSourceCode1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID1
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: dataSourceCode2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: recordID2
+          in: query
+          description: TODO
+          required: true
+          schema:
+            type: string
+        - name: maxDegree
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: excludedEntities and requiredDsrcs (TODO)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleJsonString'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/get-active-config-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineGetActiveConfigID
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/get-entity-by-entity-id:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineGetEntityByEntityID
+      parameters:
+        - name: entityID
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleResponse'
+
+  /g2engine/get-entity-by-entity-id-v2:
+    post:
+      tags:
+        - g2engine
+      summary: TODO
+      description: TODO
+      operationId: postG2engineGetEntityByEntityIDV2
+      parameters:
+        - name: entityID
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
+        - name: flags
+          in: query
+          description: TODO
+          schema:
+            type: integer
+            format: int64
       responses:
         '200':
           description: Successful operation
