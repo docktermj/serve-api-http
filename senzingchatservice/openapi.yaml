@@ -474,7 +474,7 @@ paths:
         - g2config
       summary: TODO
       description: TODO
-      operationId: postG2configmgrReplaceDefaultConfigID
+      operationId: postG2configmgrSetDefaultConfigID
       parameters:
         - name: configID
           in: query
